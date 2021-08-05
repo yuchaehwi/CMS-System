@@ -91,12 +91,12 @@ class Tables extends PureComponent {
   /**  직원정보, 일별출퇴근(전직원) 출력  **/
   UNSAFE_componentWillMount() {
     const { location } = this.props;
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    // const proxyurl = "https://cors-anywhere.herokuapp.com/";
     let url = '';
     let path = (location.pathname).substring(7);
     if(path==='member' || path==='selectAttendance'){
       url = apiUrl + "profile/all";
-      fetch(proxyurl + url)
+      fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         memberProfile : data,
@@ -115,7 +115,7 @@ class Tables extends PureComponent {
       })
 
       url = apiUrl + "info/attendance/all?date="+this.state.selectDate;
-      fetch(proxyurl + url)
+      fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         allMemberDayAttendance : data,
@@ -147,11 +147,11 @@ class Tables extends PureComponent {
       selectDate : date
     })
 
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    // const proxyurl = "https://cors-anywhere.herokuapp.com/";
     let url = '';
     if(path === 'dailyAllAttendance') {
       url = apiUrl + "info/attendance/all?date="+date;
-      fetch(proxyurl + url)
+      fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         allMemberDayAttendance : data
@@ -175,10 +175,10 @@ class Tables extends PureComponent {
     this.setState({
       loadingIndicator: true
     })
-    const proxyurl="https://cors-anywhere.herokuapp.com/";
+    // const proxyurl="https://cors-anywhere.herokuapp.com/";
     let url='';
     url = apiUrl + "info/attendance?uuid="+selectMemberId+"&return_type="+selectType+"&date=" + selectDate
-    fetch(proxyurl + url)
+    fetch(url)
       .then(response => response.json())
       .then(data => this.setState({
         selectMemberAttendance:data,
