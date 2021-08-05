@@ -1,0 +1,251 @@
+/* dashboard */
+.workChart_color {
+    color :#dc3545;
+}
+
+.homeChart_color {
+    color : #17a2b8;
+}
+
+.card-category {
+    font-size : 14px;
+}
+
+.chart-option {
+    display : flex;
+    flex-direction: row;
+}
+
+.dashboard-calendar {
+    margin : 0 auto;
+    display : inline-block !important;
+}
+
+.dashboard-calendar > button {
+    background : transparent !important;
+}
+
+.dashboard-calendar > button:hover {
+    background : transparent !important;
+}
+
+.dashboard-calendar > i {
+    display : inline-block !important;
+    color : #ffffff;
+}
+
+.card-chart .chart-area {
+    height : 320px !important;
+}
+
+.chart-loading {
+    position : absolute;
+    width : 100%;
+    top : 50%;
+    transform : translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .chad-chart.card {
+        height : 425px;
+    }
+
+    .chart-body {
+        position : relative;
+        overflow: auto;
+        width: 100%;
+        height: 349px;
+        display: list-item;
+    }
+    
+    .chart-area {
+        overflow-x: scroll;
+        width: 800px !important;
+        height: 210px;
+    }
+
+    .chartjs-size-monitor {
+        position: relative !important;
+    }
+
+    .chart-option .dashboard-calendar button::after {
+        display : none;
+    }
+
+    .chart-option .dashboard-calendar .calendar-div {
+        left : 50%;
+        transform : translateX(-50%);
+    }
+}
+
+/* 직원정보 */
+.status-leave {
+    opacity: 0.3;
+}
+
+/* 직원 상세정보(모바일) */
+@media screen and (max-width: 768px) {
+    .memberList.pc-view {
+        display : none;
+    }
+    
+    .day-select-member.pc-view {
+        display : none;
+    }
+
+    table thead tr.member th:nth-child(4), table thead tr.member th:nth-child(5),table thead tr.member th:nth-child(6),table thead tr.member th:nth-child(7),table thead tr.member th:nth-child(8),table thead tr.member th:nth-child(9) {
+        display : none;
+    }
+
+    table thead tr.selectAttendance.day th:nth-child(1) {
+        display : none;
+    }
+
+    table thead tr.selectAttendance.month th:nth-child(4), table thead tr.selectAttendance.month th:nth-child(5), table thead tr.selectAttendance.month th:nth-child(6) {
+        display : none;
+    }
+
+    table thead tr.dailyAllAttendance.month th:nth-child(4), table thead tr.dailyAllAttendance.month th:nth-child(5), table thead tr.dailyAllAttendance.month th:nth-child(6) {
+        display : none;
+    }
+}
+
+.ps {
+    overflow-x: scroll !important;
+}
+
+/* 직원 상세정보 모달창 */
+.memberModal {
+    position: fixed;
+    z-index: 2500;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+    width : 80%;
+    background-color:#525f7f;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.modal-input {
+    height: calc(2.25rem + 2px);
+    padding: 0.5rem 0.7rem;
+    font-size: 0.875rem;
+    line-height: 1.42857;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #1f8ef1;
+    border-radius: 0.25rem;
+    box-shadow: none;
+}
+
+.card-footer {
+    margin : 0 auto;
+}
+
+.card-footer > button {
+    background: #1f83f1 !important;
+}
+
+.modal-profile {
+    position: fixed;
+    left: 50%;
+    z-index: 5000;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.modal-profile .col-md-8 {
+    margin : 0 auto;
+}
+
+.layerWindow {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    opacity: 0.4;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.modalMemberProfile {
+    margin : 0px;
+    padding : 0px;
+    list-style: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width : 80%;
+}
+
+.modalMemberProfile > li {
+    width : 100%;
+}
+
+.modalMemberProfile > li:nth-child(odd) {
+    font-weight: bold;
+    font-size : 15px;
+}
+
+.modalMemberProfile > li > div {
+    width : 100%;
+    height : 30px;
+    border : 1px solid #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-indent: 10px;
+}
+
+/* 특정직원 출퇴근현황 선택지 */
+.headerAlign {
+    display : flex;
+    flex-direction: column;
+}
+
+.headerAlign .row {
+    flex-direction: row;
+    margin-left: 0px;
+}
+
+.dropdown > div {
+    z-index: 1;
+}
+
+.calendar-container {
+    color : #000 !important;
+}
+
+.marginTop {
+    margin-top : -5px;
+}
+
+.calendarBtn {
+    display : none !important;
+    cursor: pointer;
+}
+
+/* 특정직원 출퇴근현황 일/월별 타입 선택 */
+input[type="radio"] {
+    width : 20px;
+    height : 20px;
+    vertical-align: middle;
+}
+
+/* 특정직원 출퇴근현황 월별 선택 input */
+.month-input {
+    height : 38px;
+    border-radius: 0.4285rem;
+    border : 0;
+    text-indent : 10px;
+}
+
+/* 특정직원 출퇴근현황 선택직원명 출력 */
+.selectMemberName {
+    padding : 0 15px;
+    margin : 15px 0 0 0;
+}
