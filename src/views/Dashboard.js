@@ -56,9 +56,8 @@ class Dashboard extends PureComponent {
     let memberNameList = [];
     let workTimeList = [];
     let homeTimeList = [];
-    const proxyurl="https://cors-anywhere.herokuapp.com/";
-    let url = apiUrl + "info/attendance/all?date=" + this.state.selectDateFormat;
-      fetch(proxyurl + url)
+    let url = apiUrl + "info/attendance/all?date=2021-08-05";
+      fetch(url)
       .then(response => response.json())
       .then(data => {
         data.forEach(function(member) {
